@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-
+@EnableCircuitBreaker
 public class CourseRegistrationApplication {
 
 	public static void main(String[] args) {
