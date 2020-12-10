@@ -1,5 +1,6 @@
 package com.secondassignment.CourseRegistration.controller;
 
+import com.netflix.discovery.EurekaClient;
 import com.secondassignment.CourseRegistration.domain.Course;
 import com.secondassignment.CourseRegistration.service.CourseService;
 import com.secondassignment.CourseRegistration.service.dto.CourseResponce;
@@ -15,7 +16,7 @@ public class CourseController {
 
     @Autowired
     private CourseService courseService;
-
+    EurekaClient client;
     @RequestMapping("/course")
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
